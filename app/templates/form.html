@@ -1,0 +1,41 @@
+ 
+{% extends 'base.html' %}
+
+{% block head%}
+	<title> form </title>
+
+
+{% endblock %}
+
+{% block body%}
+	<h2> Enter details to add data to database</h2>
+	<form action='/form' method ='POST'>
+		Name: <input type='text' name='name' id='name'> <br>
+		Email: <input type='text' name='email' id='email'> <br>
+		Phone: <input type='text' name='phone' id='phone'><br>
+		Age: <input type='text' name='age' id='age'> <br>
+		<input type ='Submit' value = 'Submit'>
+	</form>
+<table border=True 1px solid black>
+	<tr>
+		<td> Name </td>
+		<td> Email </td>
+		<td> Phone </td>
+		<td> Age </td>
+		<td> Actions </td>
+
+	</tr>
+	
+
+    {% for post in users%}
+    	<tr>
+		<td> <h2>{{ post.name.upper() }}</h2> </td>
+		<td><h3>{{ post.email.lower()  }}</h3>  </td>
+	  	<td><h3>{{ post.phone }}</h3> </td>
+		<td><h3>{{ post.age }}</h3> </td>
+		<td><h4><a href='/form/delete/{{post.name}}'>Delete, </a><br><a href='/form/update/{{post.name}}' >Update </a></h4></td>
+	</tr>
+    {% endfor  %}
+
+</table>
+{% endblock%}
