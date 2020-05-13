@@ -14,6 +14,7 @@ To access the webapp go to "localhost:11154"
 
 To stop the container : 
 	- docker-compose stop
+
 To start the container :
 	- docker-compose start
 
