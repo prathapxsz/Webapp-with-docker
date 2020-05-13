@@ -1,22 +1,22 @@
 # Webapp-with-docker
-A simple webapp with database using dockerfile
+A simple webapp with database using docker container
+ 
+Clone the repository and cd into the folder
 
 SETTING UP AND BUILDING IMAGE:
 
-Clone the repository
+  - start docker service
+ 
+  - Run the following command:
+	- docker-compose -d up
 
-Chanege workdir to Webapp-with-docker
+To access the webapp go to "localhost:11154"
 
--  cd /Webapp-with-docker
+To stop the container : 
+	- docker-compose stop
+To start the container :
+	- docker-compose start
 
-Build docker image with the following command
 
--  docker build -t flaskapp:v1 .
-
-CREATING A CONTAINER :
-
-docker run -d --name <name of container> -p <port you want to user>:5000 flask:v1
-
-Eg - docker run -d --name app -p 55111:5000 flask:v1
 
 
