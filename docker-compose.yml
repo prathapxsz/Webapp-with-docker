@@ -1,0 +1,9 @@
+version : '3.0'
+services : 
+ app1:
+  image: flask:v2
+  build: .
+  container_name: webapp
+  ports:
+    - "11154:5000" 
+
